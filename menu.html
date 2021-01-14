@@ -62,13 +62,16 @@
 
 
     <div id="secao__imagens">
-        <h1>Estamos na mesma página.</h1>
+        <div class="secao__texto">
+          
+        </div>
 
         <div class="secao__wrapper">
             <img src="img/people/home-2.png" alt="2">
             <img src="img/people/home-1.png" alt="1">
             <img src="img/people/home-3.png" alt="3">
             <img src="img/people/home-4.png" alt="4">
+            <img src="img/people/home-5.png" alt="4">
             <img src="img/people/home-6.png" alt="5">
             <img src="img/people/home-7.png" alt="6">
             <img src="img/people/home-8.png" alt="7">
@@ -78,7 +81,6 @@
             <img src="img/people/home-12.png" alt="11">
             <img src="img/people/home-13.png" alt="12">
             <img src="img/people/home-14.png" alt="13">
-            <img src="img/people/home-14.png" alt="14">
             <img src="img/people/home-15.png" alt="15">
             <img src="img/people/home-16.png" alt="16">
             <img src="img/people/home-17.png" alt="17">
@@ -90,6 +92,15 @@
             <img src="img/people/home-23.png" alt="23">
             <img src="img/people/home-24.png" alt="24">
             <img src="img/people/home-25.png" onload="jaCarregouTudo()" alt="25">
+
+
+            <script>
+                function jaCarregouTudo() {
+                    gsapAnimation()
+                }
+            </script>
+
+
         </div>
     </div>
 
@@ -130,14 +141,11 @@
             "img/people/home-22.png",
             "img/people/home-23.png",
             "img/people/home-24.png",
-           // "img/people/home-25.png",
+            // "img/people/home-25.png",
 
         )
 
 
-        function jaCarregouTudo() {
-            gsapAnimation()
-        }
 
 
         //cria classe responsiva no body
@@ -170,7 +178,7 @@
 
 
         //GREENSOCK
-        const h1Intro = document.querySelector("#secao__imagens h1")
+        const h1Intro = document.querySelector(".text__intro")
 
         gsap.set(".secao__wrapper img", {
             opacity: 0,
