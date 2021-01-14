@@ -9,44 +9,7 @@
 </head>
 
 <body>
-    <script>
-        var images = new Array()
 
-        function preload() {
-            for (i = 25; i < preload.arguments.length; i++) {
-                images[i] = new Image()
-                images[i].src = preload.arguments[i]
-            }
-        }
-        preload(
-            "img/people/home-2.png",
-            "img/people/home-1.png",
-            "img/people/home-3.png",
-            "img/people/home-4.png",
-            "img/people/home-6.png",
-            "img/people/home-7.png",
-            "img/people/home-8.png",
-            "img/people/home-9.png",
-            "img/people/home-10.png",
-            "img/people/home-11.png",
-            "img/people/home-12.png",
-            "img/people/home-13.png",
-            "img/people/home-14.png",
-            "img/people/home-14.png",
-            "img/people/home-15.png",
-            "img/people/home-16.png",
-            "img/people/home-17.png",
-            "img/people/home-18.png",
-            "img/people/home-19.png",
-            "img/people/home-20.png",
-            "img/people/home-21.png",
-            "img/people/home-22.png",
-            "img/people/home-23.png",
-            "img/people/home-24.png",
-            "img/people/home-25.png",
-
-        )
-    </script>
     <nav id="menu__brandon">
         <div class="container">
             <div class="menu__wrapper">
@@ -134,6 +97,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
     <script>
+        var images = new Array()
+
+        function preload() {
+            for (i = 25; i < preload.arguments.length; i++) {
+                images[i] = new Image()
+                images[i].src = preload.arguments[i]
+            }
+        }
+        preload(
+            "img/people/home-2.png",
+            "img/people/home-1.png",
+            "img/people/home-3.png",
+            "img/people/home-4.png",
+            "img/people/home-6.png",
+            "img/people/home-7.png",
+            "img/people/home-8.png",
+            "img/people/home-9.png",
+            "img/people/home-10.png",
+            "img/people/home-11.png",
+            "img/people/home-12.png",
+            "img/people/home-13.png",
+            "img/people/home-14.png",
+            "img/people/home-14.png",
+            "img/people/home-15.png",
+            "img/people/home-16.png",
+            "img/people/home-17.png",
+            "img/people/home-18.png",
+            "img/people/home-19.png",
+            "img/people/home-20.png",
+            "img/people/home-21.png",
+            "img/people/home-22.png",
+            "img/people/home-23.png",
+            "img/people/home-24.png",
+            "img/people/home-25.png",
+
+        )
+
+
+        function jaCarregouTudo() {
+            gsapAnimation()
+        }
+
+
         //cria classe responsiva no body
         const mediaQuery = window.matchMedia('(min-width: 992px)')
 
@@ -175,23 +181,21 @@
             timeline
                 .staggerTo(".secao__wrapper img", 2.5, {
                     opacity: 1,
-                }, .08,)
+                }, .08, )
 
                 .to("#menu__brandon ", .4, {
                     y: 0,
-                    ease:"sine.out",
+                    ease: "sine.out",
                     onComplete: function () {
                         h1Intro.classList.add("terminou")
-                        
+
                     }
                 }, 1.7)
 
         }
 
         //document.addEventListener("DOMContentLoaded", gsapAnimation);
-        function jaCarregouTudo() {
-            gsapAnimation()
-        }
+
         menuItem.addEventListener("click", menuMobile); //click menu mobile
         itemMenu.forEach((i) => i.addEventListener("click", menuMobile)); //fecha on click
     </script>
