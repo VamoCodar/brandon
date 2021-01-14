@@ -1683,8 +1683,10 @@ body {
 
 .menu__open .menu__atalhos {
 	display: block !important;
-
+    position: relative;
+    right: -20px;
 	ul {
+
 		height: 100vh;
 		width: 50%;
 		position: absolute;

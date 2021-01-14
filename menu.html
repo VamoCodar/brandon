@@ -126,7 +126,7 @@
             <img src="img/people/home-22.png" alt="22">
             <img src="img/people/home-23.png" alt="23">
             <img src="img/people/home-24.png" alt="24">
-            <img src="img/people/home-25.png" onload="loadImage()" alt="25">
+            <img src="img/people/home-25.png" onload="jaCarregouTudo()" alt="25">
         </div>
     </div>
 
@@ -171,26 +171,25 @@
         });
 
         function gsapAnimation() {
-
-
             const timeline = new TimelineMax();
-
             timeline
                 .staggerTo(".secao__wrapper img", 2.5, {
                     opacity: 1,
-                }, .10)
-                .to("#menu__brandon ", .3, {
+                }, .08,)
+
+                .to("#menu__brandon ", .4, {
                     y: 0,
+                    ease:"sine.out",
                     onComplete: function () {
                         h1Intro.classList.add("terminou")
+                        
                     }
-                }, 1.5)
-
+                }, 1.7)
 
         }
 
         //document.addEventListener("DOMContentLoaded", gsapAnimation);
-        function loadImage() {
+        function jaCarregouTudo() {
             gsapAnimation()
         }
         menuItem.addEventListener("click", menuMobile); //click menu mobile
